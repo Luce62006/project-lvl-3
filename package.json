@@ -2,26 +2,28 @@
   "name": "@hexlet/code",
   "version": "0.1.0",
   "description": "rss agregator",
+  "main": "index.js",
   "scripts": {
-    "test": "jest --colors",
+    "test": "npx jest --bail",
     "start": "webpack serve --history-api-fallback --inline --progress"
-},
+  },
+
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hexlet-boilerplates/webpack-package.git"
+    "url": ""
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/hexlet-boilerplates/webpack-package/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/hexlet-boilerplates/webpack-package#readme",
+  "homepage": "",
   "jest": {
     "verbose": true,
     "testURL": "http://localhost/",
     "testEnvironment": "jsdom"
   },
-  "main": "index.js",
+
   "devDependencies": {
     "@babel/core": "^7.15.5",
     "@babel/eslint-parser": "^7.15.4",
