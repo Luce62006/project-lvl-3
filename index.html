@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RSS agregator</title>
+</head>
+<body class="d-flex flex-column min-vh-100">
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" data-backdrop="true" aria-labelledby="modal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalLabel"></h5>
+        <button type="button" class="btn-close" data-role="closeModal" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body"></div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-role="closeModal" data-bs-dismiss="modal">Закрыть</button>
+        <a type="button" rel="noopener norefferrer" role="button" target="_blank" class="btn btn-primary full_article" href="">Читать</a>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="container-fluid bg-light bg-gradient p-5">
+  <div class="row">
+    <div class="col-md-10 col-lg-8 mx-auto text-secondary">
+      <h1 class="mb-2">RSS агрегатор</h1>
+      <p class="fs-5">Собирайте статьи с любимых порталов в одном месте</p>
+      <form class="rss_form" name="rssForm">
+        <div class="row">
+          <div class="col-9">
+            <input
+                    class="form-control form-control-lg mb-3"
+                    name="rssUrl"
+                    type="text"
+                    placeholder="rss ссылка"
+                    aria-label="rss_input"
+                    autofocus
+            />
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-secondary btn-lg px-sm-4 fw-bold" type="submit">
+              Добавить
+            </button>
+          </div>
+        </div>
+      </form>
+      <p class=" mb-1 fw-lighter">Пример: https://ru.hexlet.io/lessons.rss</p>
+      <p class=" mb-1 feedback position-absolute fst-italic"></p>
+    </div>
+  </div>
+</section>
+<section class="container-fluid container-xxl p-5">
+  <div class="row">
+    <div class="col-md-10 p-4 col-lg-8 mx-auto posts"></div>
+    <div class="col-md-10 p-4 col-lg-4 mx-auto feeds"></div>
+  </div>
+</section>
+</body>
+</html>
